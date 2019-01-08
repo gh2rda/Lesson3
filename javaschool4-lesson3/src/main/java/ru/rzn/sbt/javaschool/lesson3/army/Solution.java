@@ -13,13 +13,16 @@ public class Solution {
      */
     public static boolean armyEquals(Warrior[] alpha, Warrior[] beta) {
         boolean result = false;
-        if (!(alpha == null || beta == null || (alpha.length != beta.length))) {
+        if (!((alpha == null ^ beta == null) || (alpha.length != beta.length))) {
             result = true;
-
-            for (int i = 0; i < alpha.length; i++) {
-                if (!alpha[i].equals(beta[i])) {
-                    result = false;
-                    break;
+            if (alpha == null) {
+                result = true;
+            }else{
+                for (int i = 0; i < alpha.length; i++) {
+                    if (! ((alpha[i]==null &&beta[i]==null) || (alpha[i]!=null && alpha[i].equals(beta[i])) )) {
+                        result = false;
+                        break;
+                    }
                 }
             }
         }

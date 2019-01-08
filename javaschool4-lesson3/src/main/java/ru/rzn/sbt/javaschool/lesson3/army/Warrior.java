@@ -43,11 +43,13 @@ final public class Warrior {
         if (obj == this) return true;
         if ((obj == null) || (this.getClass() != obj.getClass())) return false;
         Warrior other = (Warrior) obj;
-        if ((this.strength == other.strength) && (this.weapon.equals(other.getWeapon()))) {
-            return true;
-        } else {
-            return false;
-        }
+        if (this.strength == other.strength) {
+            if ((this.weapon == null && other.weapon == null)||(this.weapon.equals(other.weapon))) {
+                return true;
+            } else {
+                return false;
+            }
+        } else return false;
     }
 
     @Override
