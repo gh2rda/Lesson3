@@ -3,6 +3,6 @@ package ru.rzn.sbt.javaschool.lesson3.flowers;
 public class England implements Region{
     @Override
     public Flower yourNationalFlower(){
-         return new Flower() ;
+         return new Rose() ;
     }
 }
