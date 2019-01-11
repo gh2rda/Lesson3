@@ -18,7 +18,7 @@ public class Solution {
      * 3. Верните экземпляр класса в этом методе
      */
     public static Musician getVocalist() {
-        return null;
+        return new Voсalist();
     }
 
     /**
@@ -35,7 +35,7 @@ public class Solution {
      * 6. Верните экземпляр класса в этом методе
      */
     public static Musician getGuitarPlayer() {
-        return null;
+        return new GuitarPlayer();
     }
 
     /**
@@ -56,7 +56,7 @@ public class Solution {
      * 10. Верните экземпляр класса в этом методе
      */
     public static Musician getFrontMan() {
-        return null;
+        return new FromtMan();
     }
 
 
